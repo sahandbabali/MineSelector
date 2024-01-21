@@ -94,10 +94,6 @@ function updateBoardDisplay() {
                     });
 
 
-
-
-
-
                 } else if (board[rowIndex][colIndex] === "M" && select.value === '3') {
 
                     // change the value of the cell to flagged
@@ -136,6 +132,10 @@ function updateBoardDisplay() {
                         revealEmptyCells(rowIndex, colIndex);
                     }
 
+                } else if (board[rowIndex][colIndex] === "t" && select.value === '1') {
+                    board[rowIndex][colIndex] = "M"
+                } else if (board[rowIndex][colIndex] === "f" && select.value === '1') {
+                    board[rowIndex][colIndex] = 0
                 }
 
 
